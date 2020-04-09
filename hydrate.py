@@ -11,6 +11,7 @@
 
 import gzip
 import json
+import random
 
 from tqdm import tqdm
 from twarc import Twarc
@@ -18,6 +19,7 @@ from pathlib import Path
 
 twarc = Twarc()
 data_dirs = ['2020-01', '2020-02', '2020-03']
+sampling_rate = 0.1
 lang_set = set(["en", "null", None])
 
 
@@ -57,7 +59,7 @@ def hydrate(id_file):
     with gzip.open(gzip_path, 'w') as output:
         with tqdm(total=num_ids) as pbar:
             for tweet in twarc.hydrate(id_file.open()):
-                if tweet["lang"] in lang_set:
+                if tweet["lang"] in lang_set and random.random() < sampling_rate:
                     output.write(json.dumps(tweet).encode('utf8') + b"\n")
                     pbar.update(1)
 
