@@ -18,6 +18,7 @@ from pathlib import Path
 
 twarc = Twarc()
 data_dirs = ['2020-01', '2020-02', '2020-03']
+lang_set = set(["en", "null", None])
 
 
 def main():
@@ -56,8 +57,9 @@ def hydrate(id_file):
     with gzip.open(gzip_path, 'w') as output:
         with tqdm(total=num_ids) as pbar:
             for tweet in twarc.hydrate(id_file.open()):
-                output.write(json.dumps(tweet).encode('utf8') + b"\n")
-                pbar.update(1)
+                if tweet["lang"] in lang_set:
+                    output.write(json.dumps(tweet).encode('utf8') + b"\n")
+                    pbar.update(1)
 
 
 if __name__ == "__main__":
