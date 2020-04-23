@@ -1,6 +1,6 @@
 # COVID-19-TweetIDs
 
-The repository contains an ongoing collection of tweets IDs associated with the novel coronavirus COVID-19 (SARS-CoV-2), which commenced on January 28, 2020. We used the Twitter’s search API to gather historical Tweets from the preceding 7 days, leading to the first Tweets in our dataset dating back to January 22, 2020. We leveraged Twitter’s streaming API to follow specified accounts and also collect in real-time tweets that mention specific keywords. To comply with Twitter’s [Terms of Service](https://developer.twitter.com/en/developer-terms/agreement-and-policy), we are only publicly releasing the Tweet IDs of the collected Tweets. The data is released for non-commercial research use. 
+The repository contains an ongoing collection of tweets IDs associated with the novel coronavirus COVID-19 (SARS-CoV-2), which commenced on January 28, 2020. We used the Twitter’s search API to gather historical Tweets from the preceding 7 days, leading to the first Tweets in our dataset dating back to January 21, 2020. We leveraged Twitter’s streaming API to follow specified accounts and also collect in real-time tweets that mention specific keywords. To comply with Twitter’s [Terms of Service](https://developer.twitter.com/en/developer-terms/agreement-and-policy), we are only publicly releasing the Tweet IDs of the collected Tweets. The data is released for non-commercial research use. 
 
 The associated paper to this repository can be found here: [#COVID-19: The First Public Coronavirus Twitter Dataset](https://arxiv.org/abs/2003.07372)
 
@@ -12,7 +12,7 @@ The Tweet-IDs are organized as follows:
 
 ## Notes About the Data
 A few notes about this data: 
-* We are still working on processing the over 50 million Tweets that we have collected, and will be incrementally releasing all of the past Tweet IDs as the files finish processing and releasing newer Tweet IDs as the data becomes available to us.
+* We will be continuously maintaining this database for the foreseeable future, and will be uploading new data on a weekly basis.  
 * There may be a few hours of missing data due to technical difficulties. We have done our best to recover as many Tweets from those time frames by using Twitter’s search API. 
 * We will keep a running summary of basic statistics as we upload data in each new release. 
 * The file keywords.txt and accounts.txt contains the updated keywords and accounts respectively that we tracked in our data collection. Each keyword and account will be followed by the date we began tracking them. 
@@ -48,22 +48,22 @@ This dataset is licensed under the Creative Commons Attribution-NonCommercial-Sh
 
 Emily Chen, Kristina Lerman, and Emilio Ferrara. 2020. #COVID-19: The First Public Coronavirus Twitter Dataset.  arXiv:cs.SI/2003.07372, 2020
 
-# Statistics Summary (v1.2)
-Number of Tweets : **72,403,796**
+# Statistics Summary (v1.5)
+Number of Tweets : **101,771,227**
 
-Language Breakdown 
+Language breakdown of top 10 most prevalent languages : 
 | Language        | ISO     | No. tweets       | % total Tweets     |
 |-------------    |-----    |------------      |----------------    |
-| English         | en      | 49,525,165       | 68.40%             |
-| Spanish         | es      | 7,467,220        | 10.31%             |
-| Indonesian      | in      | 2,296,629        | 3.17%              |
-| French          | fr      | 2,164,654        | 2.99%              |
-| Thai            | th      | 1,927,905        | 2.66%              |
-| Portuguese      | pt      | 1,740,967        | 2.40%              |
-| (undefined)     | und     | 1,307,121        | 1.81%              |
-| Japanese        | ja      | 1,276,425        | 1.76%              |
-| Italian         | it      | 1,183,317        | 1.63%              |
-| Turkish         | tr      | 688,860          | 0.95%              |
+| English         | en      | 67,427,185       | 66.25%             |
+| Spanish         | es      | 11,254,540       | 11.06%             |
+| Indonesian      | in      | 3,591,884        | 3.53%              |
+| French          | fr      | 3,124,414        | 3.07%              |
+| Portuguese      | pt      | 2,715,462        | 2.67%              |
+| Thai            | th      | 2,577,166        | 2.53%              |
+| (undefined)     | und     | 2,113,795        | 2.08%              |
+| Japanese        | ja      | 1,867,601        | 1.84%              |
+| Italian         | it      | 1,419,867        | 1.40%              |
+| Turkish         | tr      | 1,092,512        | 1.07%              |
 
 # Known Gaps
 | Date          | Time              |
@@ -74,6 +74,7 @@ Language Breakdown
 | 2/23/2020     | 0:00 - 24:00 UTC  |
 | 2/24/2020     | 0:00 - 4:00 UTC   |
 | 2/25/2020     | 0:00 - 3:00 UTC   |
+| 3/2/2020      | Intermittent Internet Connectivity Issues |
 
 # Inquiries
 If you have technical questions about the data collection, please contact Emily Chen at **echen920[at]usc[dot]edu**.
